@@ -1,4 +1,4 @@
-$( document ).ready( inicio );
+$(document).ready(inicio);
 
 function inicio() {
 	$('.modal').modal();

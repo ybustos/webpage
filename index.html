@@ -15,6 +15,7 @@
 
     <!-- ESTILOS PROPIOS -->
     <link href="css/estilos.css" rel="stylesheet">
+    <link href="css/margin-padding.css" rel="stylesheet">
 
 </head>
 <body>
@@ -44,7 +45,7 @@
             <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
         </div>
         <div class="row center">
-            <a href="http://materializecss.com/getting-started.html" id="download-button"
+            <a href="#" id="download-button"
                class="btn-large waves-effect waves-light orange">Get Started</a>
         </div>
         <br><br>
@@ -135,31 +136,30 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            Made by <a class="orange-text text-lighten-3" href="#">Materialize</a>
         </div>
     </div>
 </footer>
 
 
-<div id="contacto" class="modal">
+<div id="contacto" class="modal small-modal">
     <form class="col s12">
         <div class="modal-content">
-            <h4>¿Hablamos?</h4>
+            <h4 class="center">¿Hablamos?</h4>
 
             <div class="row">
-                <div class="input-field col s12 m6">
+                <div class="input-field col s12 m12">
+                    <i class="material-icons prefix pt-15">face</i>
                     <input id="nombre" name="name" type="text" class="validate">
                     <label for="nombre" data-error="Necesitamos saber tu nombre">Nombre</label>
                 </div>
                 <div class="input-field col s12 m6">
-                    <input id="apellidos" name="sur" type="text" class="validate">
-                    <label for="apellidos" data-error="Necesitamos saber tus apellidos">Apellidos</label>
-                </div>
-                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix pt-15">mail</i>
                     <input id="email" name="mail" type="email" class="validate">
                     <label for="email" data-error="La dirección de correo debe ser válida">Correo</label>
                 </div>
                 <div class="input-field col s12 m6">
+                    <i class="material-icons prefix pt-15">phone</i>
                     <input id="telefono" name="tel" type="tel" class="validate">
                     <label for="telefono" data-error="El número de teléfono debe ser válido">Teléfono</label>
                 </div>
@@ -203,10 +203,10 @@
             </div>
 
             <div id="txt-otr" class="row">
-                <div class="col s12">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix pt-15º">mode_edit</i>
                     <label for="informacion">¿En que podemos ayudarte?</label>
                     <textarea id="informacion" name="informacion" class="materialize-textarea" data-length="500"></textarea>
-
                 </div>
             </div>
 
