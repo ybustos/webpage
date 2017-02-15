@@ -5,6 +5,8 @@ nav {
 	display: none;
 }
 
-.small-modal {
-    max-width: 35% !important;
+@media (min-width: 900px) {
+    #contacto {
+        max-width: 35%;
+    }
 }
