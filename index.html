@@ -164,49 +164,49 @@
         <div class="row">
             <div class="input-field col s12 m12">
                 <i class="material-icons prefix pt-15">face</i>
-                <input id="nombre" name="name" type="text" class="validate">
+                <input id="nombre" name="name" type="text" class="validate cnt-mail">
                 <label for="nombre" data-error="Necesitamos saber tu nombre">Nombre</label>
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix pt-15">mail</i>
-                <input id="email" name="mail" type="email" class="validate">
+                <input id="email" name="mail" type="email" class="validate cnt-mail">
                 <label for="email" data-error="La dirección de correo debe ser válida">Correo</label>
             </div>
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix pt-15">phone</i>
-                <input id="telefono" name="tel" type="tel" class="validate">
+                <input id="telefono" name="tel" type="tel" class="validate cnt-mail">
                 <label for="telefono" data-error="El número de teléfono debe ser válido">Teléfono</label>
             </div>
         </div>
         <p>¿Qué cojones quieres?</p>
         <div id="checkboxes" class="row hide-on-small-only">
             <p class="col s6 m4">
-                <input type="checkbox" name="m-opt[]" id="cbx-dwe"/>
+                <input value="dwe" class="cbx" type="checkbox" name="opt[]" id="cbx-dwe"/>
                 <label for="cbx-dwe">Página web estática</label>
             </p>
             <p class="col s6 m4">
-                <input type="checkbox" name="m-opt[]" id="cbx-din"/>
+                <input value="din" class="cbx" type="checkbox" name="opt[]" id="cbx-din"/>
                 <label for="cbx-din">Página web dinámica</label>
             </p>
             <p class="col s6 m4">
-                <input type="checkbox" name="m-opt[]" id="cbx-appm"/>
+                <input value="appm" class="cbx" type="checkbox" name="opt[]" id="cbx-appm"/>
                 <label for="cbx-appm">Aplicaciones móviles</label>
             </p>
             <p class="col s6 m4">
-                <input type="checkbox" name="m-opt[]" id="cbx-seo"/>
+                <input value="seo" class="cbx" type="checkbox" name="opt[]" id="cbx-seo"/>
                 <label for="cbx-seo">SEO y SEM</label>
             </p>
             <p class="col s6 m4">
-                <input type="checkbox" name="m-opt[]" id="cbx-rpv"/>
+                <input value="rpv" class="cbx" type="checkbox" name="opt[]" id="cbx-rpv"/>
                 <label for="cbx-rpv">Diseño responsive</label>
             </p>
             <p class="col s6 m4">
-                <input type="checkbox" name="m-opt[]" id="cbx-otr"/>
+                <input value="otr" class="cbx" type="checkbox" name="opt[]" id="cbx-otr"/>
                 <label for="cbx-otr">Otro</label>
             </p>
         </div>
         <div class="hide-on-med-and-up">
-            <select class="select" name="m-opt[]" id="sel-opt" multiple>
+            <select class="select validate" name="m-opt[]" id="sel-opt" multiple>
                 <option value="dwe">Diseño web estático</option>
                 <option value="appm">Aplicaciones móviles</option>
                 <option value="seo">SEO y SEM</option>
@@ -215,11 +215,11 @@
                 <option id="sel-otr" value="otr">Otros</option>
             </select>
         </div>
-        <div id="txt-otr" class="row">
+        <div id="txt-otr" class="row cnt-mail">
             <div class="input-field col s12">
                 <i class="material-icons prefix pt-15">mode_edit</i>
                 <label for="informacion">¿Necesitas decirnos algo más? Cuéntanos</label>
-                <textarea id="informacion" name="informacion" class="materialize-textarea"
+                <textarea id="informacion" name="informacion" class="materialize-textarea validate cnt-mail"
                           data-length="500"></textarea>
             </div>
         </div>
