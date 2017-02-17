@@ -1,5 +1,5 @@
 $(document).ready(inicio);
-
+var formulario = "";
 function inicio() {
     $('.modal').modal();
     $('select').material_select();
@@ -10,6 +10,18 @@ function inicio() {
         $('#txt-otr').slideToggle("fast");
         $('#informacion').focus();
 
+    });
+
+
+
+    $('.fitems').change(function(e){
+        if(formulario === ''){
+            formulario = new FormData();
+        }
+        var id=$(this).attr('name');
+        var valor=$(this).val();
+        formulario.append(id,valor);
+        //formulario.append("opt[]",formulario.getAll('m-opt[]').slice(0,-1));
     });
 
     $('#sendContactMail').click(function () {
