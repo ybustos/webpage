@@ -32,6 +32,10 @@ function inicio() {
         }
         mail['opciones'] = opciones;
 
+        if ($('#informacion').val() ){
+            mail['informacion'] = $('#informacion').val();
+        }
+
         console.log(JSON.stringify(mail));
         Materialize.toast('I am a toast!', 3000, 'green');
     });
