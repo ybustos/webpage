@@ -1,7 +1,12 @@
 <?php
 
 $fecha = date(DATE_RFC2822);
-$headers = "From: info@codecube.es";
+$to = 'jjtr96@gmail.com';
+
+$headers = "From: info@codecube.es\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=utf-8\r\n";
+
 $nombre = $_POST['name'];
 $correo = $_POST['mail'];
 $telefono = $_POST['tel'];
@@ -42,17 +47,27 @@ for ($i = 0; $i < count($_POST['opciones']); $i += 1) {
 }
 
 $mail = <<<EOD
-<div style='padding:10px'>
-    <p>From: <em>$nombre</em><small>               $correo</small></p>
-    <p>$fecha</p>
-    <br>
-    <p>El cliente ha solicitado los siguientes servicios</p>
-    <ul>$opciones</ul>
-    $otro<br>
-    $informacion
-</div>
+	<!DOCTYPE html> 
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+			<title>Maqueta</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		</head>
+		<body>
+			<div style='padding:10px'>
+				<p>From: <em>$nombre</em><small>               $correo</small></p>
+				<p>$fecha</p>
+				<br>
+				<p>El cliente ha solicitado los siguientes servicios</p>
+				<ul>$opciones</ul>
+				$otro<br>
+				$informacion
+			</div>
+		</body>
+	</html>
 EOD;
-mail('jjtr96@gmail.com, abaenadaw@gmail.com', 'mensaje desde codecube', $mail, $headers);
+mail($to, 'mensaje desde codecube', $mail, $headers);
 exit();
 
 ?>

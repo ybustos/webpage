@@ -50,6 +50,9 @@ function inicio() {
         }
 
         $.post( "mail.php", mail, function( data ) {
+
+        })
+        .done(function(){
             Materialize.toast("Mail enviado con éxito", 3000, 'green');
             $('.modal').modal('close');
         });
