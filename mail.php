@@ -55,7 +55,7 @@ $mail = <<<EOD
 		</head>
 		<body>
 			<div style='padding:10px'>
-				<p>From: <em>$nombre</em><small>               $correo</small></p>
+				<p>De: <em>$nombre</em><small>               $correo</small></p>
 				<p>$fecha</p>
 				<br>
 				<p>El cliente ha solicitado los siguientes servicios</p>
