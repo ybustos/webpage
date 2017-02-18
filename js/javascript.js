@@ -65,14 +65,3 @@ function inicio() {
     });
 
 }
-
-
-function Popup(data) {
-
-    var mywindow = window.open('', 'title Here', 'height=400,width=600');
-    mywindow.document.write(data);
-    mywindow.print();
-    mywindow.close();
-
-    return true;
-}
