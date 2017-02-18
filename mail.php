@@ -1,19 +1,8 @@
 <?php
 
-$to = 'info@codecube.es';
-
-$headers = "From: codecube.es\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=utf-8\r\n";
-
 $nombre = $_POST['name'];
 $correo = $_POST['mail'];
 $telefono = $_POST['tel'];
-if (isset($_POST['informacion'])){
-    $informacion = $_POST['informacion'];
-}
-$opciones = "";
-$otro = "";
 
 for ($i = 0; $i < count($_POST['opciones']); $i += 1) {
     $opcion = $_POST['opciones'][$i];
@@ -35,15 +24,31 @@ for ($i = 0; $i < count($_POST['opciones']); $i += 1) {
             $opcion = 'Desarrollo web dinámico';
             break;
         case 'otr':
-            $otro = 'Además, el cliente ha solicitado la siguiente información:<br>';
+            $otro = 'Además, el cliente ha solicitado la siguiente información:'.'<br>';
             unset($opcion);
             break;
     }
     if (isset($opcion)){
-		$opciones .= '<li>' . $opcion . '</li>';
+        $opciones .= '<li>' . $opcion . '</li>';
     }
-    
+
 }
+
+if (isset($_POST['informacion'])){
+    $informacion = $_POST['informacion'];
+}
+
+$to = 'info@codecube.es';
+
+$headers = "From: codecube.es\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=utf-8\r\n";
+$headers .= "Return-Path: $correo \r\n";
+
+
+
+$opciones = "";
+$otro = "";
 
 $mail = <<<EOD
 	<!DOCTYPE html> 
@@ -55,7 +60,7 @@ $mail = <<<EOD
 		</head>
 		<body>
 			<div style='padding:10px'>
-				<p>De: <em>$nombre</em><small>               $correo</small></p>
+				<p>De: <strong>$nombre</strong></p>
 				<p>$fecha</p>
 				<br>
 				<p>El cliente ha solicitado los siguientes servicios</p>
