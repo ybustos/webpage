@@ -43,7 +43,7 @@ $to = 'info@codecube.es';
 $headers = "From: codecube.es\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-$headers .= "Return-Path: $correo \r\n";
+$headers .= "Return-Path: ".$correo." \r\n";
 
 
 
@@ -60,7 +60,8 @@ $mail = <<<EOD
 		</head>
 		<body>
 			<div style='padding:10px'>
-				<p>De: <strong>$nombre</strong></p>
+				<p>De:<strong>$nombre</strong></p>
+				<p>Correo: <em>$correo</em></p>
 				<p>$fecha</p>
 				<br>
 				<p>El cliente ha solicitado los siguientes servicios</p>
