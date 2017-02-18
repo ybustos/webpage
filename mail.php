@@ -11,9 +11,10 @@ $opciones = "";
 $otro = "";
 
 for ($i = 0; $i < count($_POST['opciones']); $i += 1) {
-    $opt = $_POST['opciones'][$i];
+    $opcion = $_POST['opciones'][$i];
+    $opt;
 
-    switch ($opt) {
+    switch ($opcion) {
         case 'dwe':
             $opt = 'Desarrollo web estático';
             break;
