@@ -4,6 +4,9 @@ $nombre = $_POST['name'];
 $correo = $_POST['mail'];
 $telefono = $_POST['tel'];
 
+$opciones = "";
+$otro = "";
+
 for ($i = 0; $i < count($_POST['opciones']); $i += 1) {
     $opcion = $_POST['opciones'][$i];
 
@@ -44,11 +47,6 @@ $headers = "From: codecube.es\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 $headers .= "Return-Path: ".$correo." \r\n";
-
-
-
-$opciones = "";
-$otro = "";
 
 $mail = <<<EOD
 	<!DOCTYPE html> 
