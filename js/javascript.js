@@ -12,6 +12,7 @@ function inicio() {
 
     });
 
+    var formulario = "";
 
 
     $('.fitems').change(function(e){
@@ -48,8 +49,12 @@ function inicio() {
             mail['informacion'] = $('#informacion').val();
         }
 
-        console.log(JSON.stringify(mail));
-        Materialize.toast('I am a toast!', 3000, 'green');
+        $.post( "mail.php", mail, function( data ) {
+
+            Materialize.toast(data, 3000, 'green');
+        });
+        //console.log(JSON.stringify(mail));
+
     });
 
     $('#sel-opt').change(function(){
