@@ -12,29 +12,32 @@ $otro = "";
 
 for ($i = 0; $i < count($_POST['opciones']); $i += 1) {
     $opcion = $_POST['opciones'][$i];
-    $opt;
 
     switch ($opcion) {
         case 'dwe':
-            $opt = 'Desarrollo web estático';
+            $opcion = 'Desarrollo web estático';
             break;
         case 'appm':
-            $opt = 'Aplicaciones móviles';
+            $opcion = 'Aplicaciones móviles';
             break;
         case 'seo':
-            $opt = 'Posicionamiento en buscadores';
+            $opcion = 'Posicionamiento en buscadores';
             break;
         case 'rpv':
-            $opt = 'Desarrollo responsive';
+            $opcion = 'Desarrollo responsive';
             break;
         case 'din':
-            $opt = 'Desarrollo web dinámico';
+            $opcion = 'Desarrollo web dinámico';
             break;
         case 'otr':
             $otro = 'Además, el cliente ha solicitado la siguiente información:<br>';
+            unset($opcion);
             break;
     }
-    $opciones .= '<li>' . $opt . '</li>';
+    if (isset($opcion)){
+		$opciones .= '<li>' . $opcion . '</li>';
+    }
+    
 }
 
 $mail = <<<EOD
@@ -43,14 +46,13 @@ $mail = <<<EOD
     <p>$fecha</p>
     <br>
     <p>El cliente ha solicitado los siguientes servicios</p>
-    <br>
     <ul>$opciones</ul>
-    $otro
+    $otro<br>
     $informacion
 </div>
 EOD;
 
-echo $mail;
 //print_r($_POST);
+exit($mail);
 
 ?>
