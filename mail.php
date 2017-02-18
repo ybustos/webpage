@@ -1,6 +1,7 @@
 <?php
 
 $fecha = date(DATE_RFC2822);
+$headers = "From: info@codecube.es";
 $nombre = $_POST['name'];
 $correo = $_POST['mail'];
 $telefono = $_POST['tel'];
@@ -51,8 +52,7 @@ $mail = <<<EOD
     $informacion
 </div>
 EOD;
-
-//print_r($_POST);
-exit($mail);
+mail('jjtr96@gmail.com, abaenadaw@gmail.com', 'mensaje desde codecube', $mail, $headers);
+exit();
 
 ?>
