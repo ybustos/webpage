@@ -1,10 +1,8 @@
 <?php
 
-$fecha = date(DATE_RFC2822);
 $to = 'info@codecube.es';
 
-$headers = "From: codecube.es\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
+$headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
 $nombre = $_POST['name'];
