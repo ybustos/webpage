@@ -69,6 +69,7 @@ EOD;
 
 function mail_confirmacion($correo)
 {
+    error_log($correo);
     $to = $correo;
 
     $headers = "From: info@codecube.es\r\n";

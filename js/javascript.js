@@ -49,7 +49,7 @@ function inicio() {
             mail['informacion'] = $('#informacion').val();
         }
 
-        $.post( "mail.php", mail, function( data ) {
+        $.post( "mailer.php", mail, function( data ) {
             Materialize.toast("Mail enviado con éxito", 3000, 'green');
             $('.modal').modal('close');
         });
