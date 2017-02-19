@@ -84,7 +84,7 @@ function mail_confirmacion($correo)
         <meta charset="UTF-8">
         <title>Maqueta</title>
     </head>
-    <body>
+    <body style="width:60%; margin:auto; min-width:300px;">
         <table style="width: 100%">
             <tr>
                 <td>
@@ -95,9 +95,7 @@ function mail_confirmacion($correo)
                                     <tr>
                                         <td style="text-align: right">Code</td>
                                         <td>
-                                            <div style="position: relative;width: 34px;top:-28px;left:12px;opacity:0.8">
-                                                <div style="width:34px; height: 34px;background-color: blue;position: absolute;"></div>
-                                            </div>
+                                            <img src="http://dev.codecube.es/img/cube.svg" alt="code cube logo" width="35px" height="35px">
                                         </td>
                                         <td>Cube</td>
                                     </tr>
