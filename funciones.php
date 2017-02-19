@@ -2,14 +2,12 @@
 
 function mail_contacto($nombre, $correo, $telefono, $opciones, $informacion)
 {
-    error_log($opciones);
     $num_opciones = count($opciones);
     $campos='';
     $otro = '';
 
     for ($i = 0; $i < $num_opciones; $i += 1) {
         $opcion = $opciones[$i];
-    error_log($opcion);
         switch ($opcion) {
             case 'dwe':
                 $opcion = 'Desarrollo web estático';
@@ -95,7 +93,7 @@ function mail_confirmacion($correo)
                                     <tr>
                                         <td style="text-align: right">Code</td>
                                         <td>
-                                            <img src="http://dev.codecube.es/img/cube.svg" alt="code cube logo" width="35px" height="35px">
+                                            <img src="http://dev.codecube.es/img/cube.png" alt="code cube logo" width="35px" height="35px">
                                         </td>
                                         <td>Cube</td>
                                     </tr>
