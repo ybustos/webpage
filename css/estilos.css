@@ -8,11 +8,7 @@ nav {
 .tcards{
     margin: auto;
 }
-@media (min-width: 900px) {
-    #contacto {
-        max-width: 35%;
-    }
-}
+
 
 /* Material icons sizes */
 .material-icons.md-18 { font-size: 18px; }

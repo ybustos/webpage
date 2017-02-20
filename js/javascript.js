@@ -13,77 +13,64 @@ function inicio() {
 
     });
 
-    var formulario = "";
-
-
-    $('.fitems').change(function(e){
-        if(formulario === ''){
-            formulario = new FormData();
-        }
-        var id=$(this).attr('name');
-        var valor=$(this).val();
-        formulario.append(id,valor);
-        //formulario.append("opt[]",formulario.getAll('m-opt[]').slice(0,-1));
-    });
-
     $('#sendContactMail').click(function () {
         var mail = {};
         var opciones = [];
         var datos = ($('.cnt-mail').serializeArray());
         var cbx = $('.cbx').serializeArray();
-        $.each(datos, function(e, v){
+        $.each(datos, function (e, v) {
             mail[v.name] = v.value;
         });
-        if(cbx.length === 0) {
-            $.each($('#sel-opt').val(), function(e, v){
+        if (cbx.length === 0) {
+            $.each($('#sel-opt').val(), function (e, v) {
                 console.log(v);
                 opciones.push(v);
             });
         } else {
-            $.each(cbx, function(e, v){
+            $.each(cbx, function (e, v) {
                 opciones.push(v.value);
             });
         }
         mail['opciones'] = opciones;
 
-        if ($('#informacion').val() ){
+        if ($('#informacion').val()) {
             mail['informacion'] = $('#informacion').val();
         }
 
-        $.post( "mailer.php", mail, function( data ) {
+        $.post("mailer.php", mail, function (data) {
             Materialize.toast("Mail enviado con éxito", 3000, 'green');
             $('.modal').modal('close');
         });
 
     });
 
-    $('#sel-opt').change(function(){
-        if($.inArray("otr", $(this).val()) != -1){
+    $('#sel-opt').change(function () {
+        if ($.inArray("otr", $(this).val()) != -1) {
             $("#txt-otr").slideDown("fast");
-        }else{
+        } else {
             $("#txt-otr").hide("fast");
         }
     });
-    if(!movil){
+    if (!movil) {
         escritorio();
     }
 
 }
 
-function escritorio(){
-    $('.card').click(function(event) {
+function escritorio() {
+    $('.card').click(function (event) {
         $(this).addClass('row');
         $(this).children('.card-image, .card-content, .card-action').addClass('col');
         $(this).parents('.tcards').siblings('.tcards').hide();
         $(this).parents('.tcards').removeClass('col').animate({
             width: "75%",
-        }, 800, function() {
+        }, 800, function () {
 
         });
     });
 
-    $('.card-action').click(function(event) {
-        if($(this).parents('.tcards').siblings().filter(':visible').length === 0) {
+    $('.card-action').click(function (event) {
+        if ($(this).parents('.tcards').siblings().filter(':visible').length === 0) {
 
         }
     });
