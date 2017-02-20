@@ -63,10 +63,10 @@ function escritorio() {
         $(this).addClass('row');
         $(this).children('.card-image, .card-content, .card-action').addClass('col');
         $(this).parents('.tcards').siblings('.tcards').hide();
-        $(this).parents('.tcards').removeClass('col').animate({
-            width: "75%",
-        }, 800, function () {
-
+        $(this).parents('.tcards').animate({
+            width: "100%",
+        }, 300, 'linear', function () {
+            $(this).removeClass('col');
         });
     });
 
