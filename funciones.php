@@ -1,6 +1,6 @@
 <?php
 
-function mail_contacto($nombre, $correo, $opciones, $informacion)
+function mail_contacto($nombre, $correo, $telefono, $opciones, $informacion)
 {
     $num_opciones = count($opciones);
     $campos='';
@@ -8,7 +8,6 @@ function mail_contacto($nombre, $correo, $opciones, $informacion)
 
     for ($i = 0; $i < $num_opciones; $i += 1) {
         $opcion = $opciones[$i];
-
         switch ($opcion) {
             case 'dwe':
                 $opcion = 'Desarrollo web estático';
@@ -83,58 +82,18 @@ function mail_confirmacion($correo)
         <meta charset="UTF-8">
         <title>Maqueta</title>
     </head>
-    <body style="max-width: 600px">
-        <table style=" width: 100%">
+    <body style="width:60%; margin:auto; min-width:300px;">
+        <table style="width: 100%">
             <tr>
                 <td>
                     <table style="width: 95%; ">
-                        <tr style="font-size: 2vw;">
+                        <tr style="font-size: 1.5rem;">
                             <td>
                                 <table style="width:20%">
                                     <tr>
                                         <td style="text-align: right">Code</td>
-                                        <td style="width:6%; min-width: 30px;">
-                                            <?xml version="1.0" encoding="iso-8859-1"?>
-                                            <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                                            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
-                                            <g>
-                                                <polygon style="fill:#556080;" points="29,58 3,45 3,13 29,26 	"/>
-                                                <polygon style="fill:#26B99A;" points="29,58 55,45 55,13 29,26 	"/>
-                                                <polygon style="fill:#434C6D;" points="3,13 28,0 55,13 29,26 	"/>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            <g>
-                                            </g>
-                                            </svg>
+                                        <td>
+                                            <img src="http://dev.codecube.es/img/cube.png" alt="code cube logo" width="35px" height="35px">
                                         </td>
                                         <td>Cube</td>
                                     </tr>
@@ -146,7 +105,7 @@ function mail_confirmacion($correo)
             </tr>
             <tr id="body">
                 <td style="border-width: 5px 0px 5px 0px; border-style: solid; border-color: #33AAD6;">
-                    <table style="padding-top: 20px">
+                    <table style="padding-top: 20px; width:100%;text-align:center;">
                         <tr>
                             <td style="color: #2564AA; font-size: 1.5rem; text-align: center;">
                                 ¡Gracias por tu interés en CodeCube!

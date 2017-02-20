@@ -1,6 +1,7 @@
 $(document).ready(inicio);
-var formulario = "";
+var movil;
 function inicio() {
+    movil = isMobile();
     $('.modal').modal();
     $('select').material_select();
     $('.button-collapse').sideNav();
@@ -63,5 +64,31 @@ function inicio() {
             $("#txt-otr").hide("fast");
         }
     });
+    if(!movil){
+        escritorio();
+    }
 
+}
+
+function escritorio(){
+    $('.card').click(function(event) {
+        $(this).addClass('row');
+        $(this).children('.card-image, .card-content, .card-action').addClass('col');
+        $(this).parents('.tcards').siblings('.tcards').hide();
+        $(this).parents('.tcards').removeClass('col').animate({
+            width: "75%",
+        }, 800, function() {
+
+        });
+    });
+
+    $('.card-action').click(function(event) {
+        if($(this).parents('.tcards').siblings().filter(':visible').length === 0) {
+
+        }
+    });
+}
+
+function isMobile() {
+    return window.innerWidth <= 600;
 }
