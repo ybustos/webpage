@@ -51,6 +51,7 @@ function inicio() {
             $("#txt-otr").hide("fast");
         }
     });
+    
     if (!movil) {
         escritorio();
     }
@@ -79,3 +80,11 @@ function escritorio() {
 function isMobile() {
     return window.innerWidth <= 600;
 }
+
+// Typed.js function
+$(function () {
+    $(".type").typed({
+        strings: ["Esto es un texto de prueba.", "Biel es imbécil."],
+        typeSpeed: 0
+    });
+});
