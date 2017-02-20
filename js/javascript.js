@@ -73,8 +73,10 @@ function escritorio() {
 
     $('.card-close').click(function (event) {
         event.stopPropagation();
+        event.preventDefault();
         $(this).parent().removeClass('row card-active').end().siblings().removeClass('col').parents('.tcards').addClass('col').attr('style','display:block');
         $('.tcards').show();
+        $('body').scrollTop($(window).scrollTop());
     });
 }
 
