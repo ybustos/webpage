@@ -60,7 +60,8 @@ function inicio() {
 
 function escritorio() {
     $('.card').click(function (event) {
-        $(this).addClass('row');
+        if($(this).hasClass('row'))return;
+        $(this).addClass('row card-active');
         $(this).children('.card-image, .card-content, .card-action').addClass('col');
         $(this).parents('.tcards').siblings('.tcards').hide();
         $(this).parents('.tcards').animate({
@@ -70,10 +71,10 @@ function escritorio() {
         });
     });
 
-    $('.card-action').click(function (event) {
-        if ($(this).parents('.tcards').siblings().filter(':visible').length === 0) {
-
-        }
+    $('.card-close').click(function (event) {
+        event.stopPropagation();
+        $(this).parent().removeClass('row card-active').end().siblings().removeClass('col').parents('.tcards').addClass('col').attr('style','display:block');
+        $('.tcards').show();
     });
 }
 
