@@ -5,7 +5,9 @@ nav {
 #txt-otr{
 	display: none;
 }
-
+.tcards{
+    margin: auto;
+}
 @media (min-width: 900px) {
     #contacto {
         max-width: 35%;

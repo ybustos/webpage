@@ -64,4 +64,25 @@ function inicio() {
         }
     });
 
+
+
+
+
+    $('.card').click(function(event) {
+        $(this).addClass('row');
+        $(this).children('.card-image, .card-content, .card-action').addClass('col');
+        $(this).parents('.tcards').siblings('.tcards').hide();
+        $(this).parents('.tcards').removeClass('col').animate({
+            width: "75%",
+        }, 800, function() {
+
+        });
+    });
+
+    $('.card-action').click(function(event) {
+        if($(this).parents('.tcards').siblings().filter(':visible').length === 0) {
+            alert();
+        }
+    });
+
 }
