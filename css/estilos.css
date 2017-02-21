@@ -44,11 +44,12 @@ nav {
 .material-icons.md-48 {
     font-size: 72px;
 }
+#autotype{
+    padding-top: 2rem;
+}
 
-#autotype {
-    display: flex;
-    align-items:center;
-    min-height: 130px;
+#autotype > *{
+   display: inline;
 }
 
 .typed-cursor{
