@@ -1,5 +1,5 @@
 nav {
-    box-shadow: none;
+   /* box-shadow: none;*/
 }
 
 #txt-otr{
@@ -45,9 +45,16 @@ nav {
     font-size: 72px;
 }
 
-/* Material icons size */
+#autotype {
+    display: flex;
+    align-items:center;
+    min-height: 130px;
+}
 
 .typed-cursor{
+    color: #2196F3;
+    font-size: 3.5rem;
+    font-weight: 300;
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
