@@ -88,6 +88,9 @@ function isMobile() {
 $(function () {
     $(".type").typed({
         strings: ["Esto es un texto de prueba.", "Biel es imbécil."],
-        typeSpeed: 0
+        typeSpeed: 0,
+        backDelay: 750,
+        loop: true,
+        loopCount: false
     });
 });

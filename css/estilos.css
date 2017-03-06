@@ -2,6 +2,22 @@ nav {
    /* box-shadow: none;*/
 }
 
+#index-banner > div {
+    position: relative;
+}
+
+#autotype{
+    padding-top: 2rem;
+}
+
+#autotype > *{
+    display: inline;
+}
+
+.mobile-frame{
+    max-width: 50%;
+}
+
 #txt-otr{
 	display: none;
 }
@@ -11,6 +27,17 @@ nav {
 .tcards > .card.card-active {
     padding-top: 25px;
     padding-right: 20px;
+}
+.cabecera {
+    margin-bottom: 4rem;
+}
+.cabecera h1 {
+    margin-bottom: 0rem;
+}
+.cabecera hr {
+    width: 15%;
+    min-width: 70px;
+    max-width: 130px;
 }
 
 @media (min-width: 900px) {
@@ -44,13 +71,7 @@ nav {
 .material-icons.md-48 {
     font-size: 72px;
 }
-#autotype{
-    padding-top: 2rem;
-}
 
-#autotype > *{
-   display: inline;
-}
 
 .typed-cursor{
     color: #2196F3;
