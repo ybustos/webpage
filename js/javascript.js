@@ -66,7 +66,7 @@ function escritorio() {
         $(this).parents('.tcards').siblings('.tcards').hide();
         $(this).parents('.tcards').animate({
             width: "100%",
-        }, 300, 'linear', function () {
+        }, 0, 'linear', function () {
             $(this).removeClass('col');
         });
     });
