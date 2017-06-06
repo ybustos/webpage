@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/codecube.es.iml" filepath="$PROJECT_DIR$/.idea/codecube.es.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dalawoo/.idea/dalawoo.iml" filepath="$PROJECT_DIR$/../../dalawoo/.idea/dalawoo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../kaleido-css/.idea/kaleido-css.iml" filepath="$PROJECT_DIR$/../../kaleido-css/.idea/kaleido-css.iml" />
     </modules>
   </component>
 </project>
